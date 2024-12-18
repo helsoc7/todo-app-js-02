@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* App Container */
+.todo-app {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Formular */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.todo-input::placeholder {
+    color: #999;
+}
+
+.todo-button {
+    background-color: #0078d7;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 40px;
+    transition: background-color 0.3s;
+}
+
+.todo-button:hover {
+    background-color: #005bb5;
+}
+
+/* Aufgabenliste */
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-name {
+    flex: 1;
+    font-size: 1rem;
+}
+
+li input[type="checkbox"]:checked + .task-name {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* Löschen-Button */
+button[aria-label="Aufgabe löschen"] {
+    background-color: #d9534f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[aria-label="Aufgabe löschen"]:hover {
+    background-color: #c9302c;
+}
+
+/* Infobereich */
+.todo-info {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 20px;
+}
